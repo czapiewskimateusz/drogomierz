@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Distance counter</string>
+    <string name="distance_label">Distance travelled</string>
+</resources>

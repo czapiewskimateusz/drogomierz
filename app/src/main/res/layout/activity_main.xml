@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.drogomierz.MainActivity">
+
+    <TextView
+        android:id="@+id/tv_distance"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="50dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDistanceTravelledLabel"
+        tools:text="1,09 km"
+        style="@android:style/TextAppearance.Material.Display1"/>
+
+    <TextView
+        android:id="@+id/textDistanceTravelledLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/distance_label"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        style="@android:style/TextAppearance.Material.Display1"/>
+
+    <ImageView
+        android:id="@+id/imageStartPause"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_play"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_distance" />
+
+    <ImageView
+        android:id="@+id/imageReset"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_stop"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_distance" />
+
+</android.support.constraint.ConstraintLayout>
