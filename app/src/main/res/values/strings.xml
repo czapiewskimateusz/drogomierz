@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Distance counter</string>
     <string name="distance_label">Distance travelled</string>
+    <string name="settings">settings</string>
+
+    <!-- Example settings for Notifications -->
+
 </resources>

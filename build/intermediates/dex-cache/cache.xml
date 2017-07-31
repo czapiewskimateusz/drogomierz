@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Mateusz\.android\build-cache\e30aa1d42e87f68aa773c313588780cc93d6c104\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="9935891f23923f39d002087085d9696568a9f657">
+        <dex dex="D:\AW\Drogomierz\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_f7fce2bcd598a990066145227b12298e6207e4ae\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Mateusz\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\26.0.0-alpha1\support-annotations-26.0.0-alpha1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="023ee503b631f69511e335a061ea008f8da60f40">
+        <dex dex="D:\AW\Drogomierz\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-26.0.0-alpha1_e38298aeea489ace19ae21bd9064bf00ab35b9cf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Mateusz\.android\build-cache\c862dd843291fc9a9d5a640abb453ab23b0a1cdf\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="D:\AW\Drogomierz\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4a45cf83278517e9937fda935583cf0fd1e7a096\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Mateusz\.android\build-cache\4b9e2e53fa0a6cad81da2a59fe5af03a9592549d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="88246166d5afb106f532f6e6deae683c66b42c89">
+        <dex dex="D:\AW\Drogomierz\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_c1bb0623492155511516094f4b20ed92e6f8ace8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Mateusz\.android\build-cache\94423ab31ca63cc69ec419757c1703f3fd5d4c06\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="952944218ecedea1554a513dec0c14d570642843">
+        <dex dex="D:\AW\Drogomierz\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_058178d046fb8c794eb789889e558176635620a5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Mateusz\.android\build-cache\b7cfdec87e075425bc3c8c33a320764ab486a3b7\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="18d31838aa4fcc768a8a0516e22cc13b94655d89">
+        <dex dex="D:\AW\Drogomierz\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_6c0b04ff111407578dba00beaac28d568aed6d0f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Mateusz\.android\build-cache\72adb757e8e6e412cd7b243798c15c1bd128abac\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="8df0e365e40beb151bc42dee20817721a6cab7b0">
+        <dex dex="D:\AW\Drogomierz\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_8e6a57668e383e5992b7cba6bcb82c4cc95d4c56\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Mateusz\.android\build-cache\b4d898ee8fe3b78cb7d50c713434dfcc43c9b38d\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="D:\AW\Drogomierz\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5d6e022c409fd06e599c365d2e0154fdb6a9191b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Mateusz\.android\build-cache\22de557e29bb9b9bbac729a1edd4386a5228386a\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="fcd01fd11233459f546c437ec927e9b61bf7caf1">
+        <dex dex="D:\AW\Drogomierz\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_fe6614e488c2faa94a264422247889f791052dd5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Mateusz\AppData\Local\Android\Sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="D:\AW\Drogomierz\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_0d4f6b56f02968ba39c6eede1b9130513669ea53\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\AW\Drogomierz\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="D:\AW\Drogomierz\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_c5ce6043c96bbafbd0125314c6696709045a67c2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Mateusz\.android\build-cache\6c3237442edc965d85db1a6a95a6df3a81f78ed3\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="2e92aa0163544a804a0b34f169ca61801770839a">
+        <dex dex="D:\AW\Drogomierz\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_eb1396cb43610f273034e8c304a7112569278008\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\AW\Drogomierz\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="46d9d9c767fb6c9a117ba77f840cef64d66dbbcc">
+        <dex dex="D:\AW\Drogomierz\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_eb95e1dd9fe5619b7f55b065851905d403c89763\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Mateusz\.android\build-cache\10621fc9629d3c0276ac7521e2c1ed9c81bf25c2\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.0"
+        sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
+        <dex dex="D:\AW\Drogomierz\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_9e5ad638fab3563d9928d4e90e4029b5cd3a1aa8\classes.dex" />
+    </item>
+
+</items>

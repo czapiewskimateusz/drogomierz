@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.drogomierz.MainActivity">
+    tools:context="com.example.drogomierz.MainActivity"
+    android:background="@color/colorPrimaryLight">
 
     <TextView
         android:id="@+id/tv_distance"
-        android:layout_width="368dp"
+        style="@android:style/TextAppearance.Material.Display1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="8dp"
@@ -16,32 +18,34 @@
         android:layout_marginTop="8dp"
         android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="50dp"
+        android:textColor="@android:color/background_light"
+        android:textSize="50sp"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textDistanceTravelledLabel"
-        tools:text="1,09 km"
-        style="@android:style/TextAppearance.Material.Display1"/>
+        tools:text="1,09 km" />
 
     <TextView
         android:id="@+id/textDistanceTravelledLabel"
+        style="@android:style/TextAppearance.Material.Display1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/distance_label"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="32dp"
         android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginRight="8dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/distance_label"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        style="@android:style/TextAppearance.Material.Display1"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageStartPause"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:src="@drawable/ic_play"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -51,7 +55,7 @@
         android:id="@+id/imageReset"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_marginRight="32dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginTop="32dp"
         android:src="@drawable/ic_stop"
         app:layout_constraintRight_toRightOf="parent"
