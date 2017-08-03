@@ -17,8 +17,8 @@ import android.widget.Toast;
 public class OdometerService extends Service {
 
     private final IBinder binder = new OdometerBinder();
-    private static double distanceInMeters;
-    private static Location lastLocation = null;
+    private double distanceInMeters;
+    private Location lastLocation = null;
     private Callbacks activity = null;
 
     @Override
@@ -27,16 +27,18 @@ public class OdometerService extends Service {
         LocationListener locationListener = new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
-                if (location.getAccuracy()<5){
-                    if (lastLocation == null || !MainActivity.sIsRunning) {
-                        lastLocation = location;
-                    }
-                    distanceInMeters += location.distanceTo(lastLocation) / 1000;
-                    lastLocation = location;
-                    String distanceString = String.format("%.3f",distanceInMeters);
-                    activity.updateClient(distanceString + " km");
-                }
 
+                if (activity != null) {
+                    if (location.getAccuracy() < 5) {
+                        if (lastLocation == null || !MainActivity.sIsRunning) {
+                            lastLocation = location;
+                        }
+                        distanceInMeters += location.distanceTo(lastLocation) / 1000;
+                        lastLocation = location;
+                        String distanceString = String.format("%.3f", distanceInMeters);
+                        activity.updateClient(distanceString + " km");
+                    }
+                }
             }
 
             @Override
@@ -60,6 +62,7 @@ public class OdometerService extends Service {
 
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             Toast toast = Toast.makeText(this, "No permissions granted", Toast.LENGTH_LONG);
+            toast.show();
         } else {
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 1, locationListener);
         }
@@ -94,6 +97,6 @@ public class OdometerService extends Service {
      * Interface to display data in Activity
      */
     public interface Callbacks {
-        public void updateClient(String distance);
+        void updateClient(String distance);
     }
 }

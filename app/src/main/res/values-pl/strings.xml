@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="settings">ustawienia</string>
+    <string name="settings">Ustawienia</string>
+    <string name="app_name">Drogomierz</string>
+    <string name="distance_label">Przebyty dystans</string>
+    <string name="pref_units_label">Jednostka</string>
+    <string name="pref_unit_metric_label">metryczne</string>
+    <string name="pref_unit_imperial_label">imperialne</string>
 </resources>

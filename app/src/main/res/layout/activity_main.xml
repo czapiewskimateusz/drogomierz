@@ -10,7 +10,7 @@
     <TextView
         android:id="@+id/tv_distance"
         style="@android:style/TextAppearance.Material.Display1"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="8dp"
@@ -24,7 +24,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textDistanceTravelledLabel"
-        tools:text="1,09 km" />
+        tools:text="1,09 km"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <TextView
         android:id="@+id/textDistanceTravelledLabel"
@@ -39,7 +41,9 @@
         android:textColor="@color/colorAccent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <ImageView
         android:id="@+id/imageStartPause"
@@ -60,5 +64,6 @@
         android:src="@drawable/ic_stop"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_distance" />
+
 
 </android.support.constraint.ConstraintLayout>

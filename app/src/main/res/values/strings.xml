@@ -3,6 +3,17 @@
     <string name="distance_label">Distance travelled</string>
     <string name="settings">settings</string>
 
-    <!-- Example settings for Notifications -->
+
+    <string name="pref_units_label">units</string>
+    <string name="pref_units_key" translatable="false">units_key</string>
+
+    <string name="pref_unit_metric_value" translatable="false">metric</string>
+    <string name="pref_unit_imperial_value" translatable="false">imperial</string>
+
+    <string name="pref_unit_metric_label">metric</string>
+    <string name="pref_unit_imperial_label">imperial</string>
+
+
+
 
 </resources>
