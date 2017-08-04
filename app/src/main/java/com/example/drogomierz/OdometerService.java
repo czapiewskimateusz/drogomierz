@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -12,17 +13,29 @@ import android.os.Binder;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.preference.PreferenceManager;
 import android.widget.Toast;
 
-public class OdometerService extends Service {
+import static com.example.drogomierz.MainActivity.IMPERIAL;
+import static com.example.drogomierz.MainActivity.METRIC;
+import static com.example.drogomierz.MainActivity.UNIT_KEY;
+
+public class OdometerService extends Service implements SharedPreferences.OnSharedPreferenceChangeListener {
 
     private final IBinder binder = new OdometerBinder();
-    private double distanceInMeters;
+    private double distanceTravelled;
     private Location lastLocation = null;
     private Callbacks activity = null;
 
+    private String unit = METRIC;
+
+
     @Override
     public void onCreate() {
+
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+
+        unit = sharedPreferences.getString(UNIT_KEY, METRIC);
 
         LocationListener locationListener = new LocationListener() {
             @Override
@@ -33,10 +46,23 @@ public class OdometerService extends Service {
                         if (lastLocation == null || !MainActivity.sIsRunning) {
                             lastLocation = location;
                         }
-                        distanceInMeters += location.distanceTo(lastLocation) / 1000;
+
+                        String distanceString = "";
+
+                        if (unit.equals(METRIC)){
+                            distanceTravelled += location.distanceTo(lastLocation) / 1000;
+                            distanceString = String.format("%.3f", distanceTravelled);
+                            distanceString += " km";
+
+                        } else if (unit.equals(IMPERIAL)){
+                            distanceTravelled += location.distanceTo(lastLocation) / 1000 * 0.621371192;
+                            distanceString = String.format("%.3f", distanceTravelled);
+                            distanceString += " ml";
+                        }
+
                         lastLocation = location;
-                        String distanceString = String.format("%.3f", distanceInMeters);
-                        activity.updateClient(distanceString + " km");
+
+                        activity.updateClient(distanceString);
                     }
                 }
             }
@@ -81,6 +107,23 @@ public class OdometerService extends Service {
 
     public void unregisterClient() {
         activity = null;
+    }
+
+
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
+        String newUnit = sharedPreferences.getString(UNIT_KEY,METRIC);
+
+        if (!unit.equals(newUnit)){
+
+            if (newUnit.equals(IMPERIAL)){
+                distanceTravelled *= 0.621371192;
+            } else if (newUnit.equals(METRIC)){
+                distanceTravelled *= 1.609344;
+            }
+
+            unit = newUnit;
+        }
     }
 
     /**

@@ -19,6 +19,9 @@ import android.widget.TextView;
 
 public class MainActivity extends FragmentActivity implements OdometerService.Callbacks {
 
+    public static  String UNIT_KEY;
+    public static  String METRIC;
+    public static  String IMPERIAL;
 
     public static boolean sIsRunning = false;
     private OdometerService odometer;
@@ -64,6 +67,11 @@ public class MainActivity extends FragmentActivity implements OdometerService.Ca
         resetImageView.setOnClickListener(imageViewListener);
 
         tvDistance = findViewById(R.id.tv_distance);
+
+
+        UNIT_KEY = getString(R.string.pref_units_key);
+        METRIC = getString(R.string.pref_unit_metric_value);
+        IMPERIAL = getString(R.string.pref_unit_imperial_value);
     }
 
     private void checkPermissions() {
@@ -123,8 +131,12 @@ public class MainActivity extends FragmentActivity implements OdometerService.Ca
                     mImageView.setImageResource(R.drawable.ic_play);
                     mImageView.setTag(R.drawable.ic_play);
 
-                    unbindService(connection);
-                    stopService(serviceIntent);
+                    if (null!=odometer){
+                        unbindService(connection);
+                        stopService(serviceIntent);
+                    }
+
+                    tvDistance.setText(getString(R.string.work_finished));
                     break;
                 }
             }

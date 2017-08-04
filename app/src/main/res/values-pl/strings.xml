@@ -6,4 +6,5 @@
     <string name="pref_units_label">Jednostka</string>
     <string name="pref_unit_metric_label">metryczne</string>
     <string name="pref_unit_imperial_label">imperialne</string>
+    <string name="work_finished">Liczenie zakończone</string>
 </resources>
