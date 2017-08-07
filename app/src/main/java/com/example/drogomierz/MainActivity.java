@@ -24,6 +24,8 @@ public class MainActivity extends FragmentActivity implements OdometerService.Ca
     public static  String IMPERIAL;
 
     public static boolean sIsRunning = false;
+    private static boolean sIsBound = false;
+
     private OdometerService odometer;
     private Intent serviceIntent;
     private TextView tvDistance;
@@ -91,12 +93,14 @@ public class MainActivity extends FragmentActivity implements OdometerService.Ca
             OdometerService.OdometerBinder odometerBinder = (OdometerService.OdometerBinder) iBinder;
             odometer = odometerBinder.getOdometer();
             odometer.registerClient(MainActivity.this);
+            sIsBound = true;
         }
 
         @Override
         public void onServiceDisconnected(ComponentName componentName) {
             odometer.unregisterClient();
             odometer = null;
+            sIsBound = false;
         }
     };
 
@@ -131,9 +135,10 @@ public class MainActivity extends FragmentActivity implements OdometerService.Ca
                     mImageView.setImageResource(R.drawable.ic_play);
                     mImageView.setTag(R.drawable.ic_play);
 
-                    if (null!=odometer){
+                    if (!sIsBound){
                         unbindService(connection);
                         stopService(serviceIntent);
+                        sIsRunning = false;
                     }
 
                     tvDistance.setText(getString(R.string.work_finished));
